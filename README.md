@@ -10,14 +10,4 @@ This project helps you build an effective daily timetable for studies, office wo
 
 ## Run locally
 Open the project in a browser by serving the folder:
-
-```bash
-cd /workspaces/time-management
-python3 -m http.server 8000
-```
-
-Then visit:
-
-```text
-http://localhost:8000
-```
+Here: https://devstryingtocode-netizen.github.io/time-management/

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Management Planner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Smart planning</p>
+          <h1>Time Management Planner</h1>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="panel planner-panel">
+          <div class="panel-header">
+            <h2>Plan your study time</h2>
+            <span class="badge">Daily focus</span>
+          </div>
+
+          <div class="field-group">
+            <label>When do you prefer to study?</label>
+            <div class="toggle-group" role="radiogroup" aria-label="Study preference">
+              <label class="toggle-option active">
+                <input type="radio" name="studyPreference" value="day" checked />
+                <span>Day</span>
+              </label>
+              <label class="toggle-option">
+                <input type="radio" name="studyPreference" value="night" />
+                <span>Night</span>
+              </label>
+              <label class="toggle-option">
+                <input type="radio" name="studyPreference" value="custom" />
+                <span>Custom time</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="field-group custom-time-group" id="customTimeGroup" hidden>
+            <label for="customStartTime">Comfortable study start time</label>
+            <input id="customStartTime" type="time" value="19:00" />
+
+            <label for="customEndTime">Comfortable study end time</label>
+            <input id="customEndTime" type="time" value="22:00" />
+          </div>
+
+          <div class="field-group">
+            <label for="freeHours">How many hours do you want to study?</label>
+            <input id="freeHours" type="number" min="0.5" max="16" step="0.5" value="6" />
+          </div>
+
+          <button id="generatePlan">Generate schedule</button>
+        </section>
+
+        <section class="panel output-panel">
+          <div class="panel-header">
+            <h2>Recommended study breakdown</h2>
+            <span class="mini-tag">Study plan</span>
+          </div>
+          <div id="summary" class="summary"></div>
+          <ul id="scheduleList" class="schedule-list"></ul>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

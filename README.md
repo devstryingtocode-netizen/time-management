@@ -9,5 +9,5 @@ This project helps you build an effective daily timetable for studies, office wo
 - View a simple recommended study schedule
 
 ## Run locally
-Open the project in a browser by serving the folder:
+Open the project
 Here: https://devstryingtocode-netizen.github.io/time-management/
